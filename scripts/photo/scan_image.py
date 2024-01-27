@@ -1,6 +1,6 @@
 from PIL import Image
 import pytesseract
-from rebase_photo import encode_image
+from rebase_photo import encode_image_base64_url
 from dotenv import load_dotenv
 load_dotenv()
 from openai import OpenAI
@@ -25,7 +25,7 @@ class ScanImageWithChatGPT:
   context = "The message is from the novel The Death and Life of Great American Cities by Jane Jacobs. This novel is about the importance of learning from traditional urbanism and how it helped shaped beautiful, yet very successful/functional cities across the country. Despite this, modern urban planning tends to throw away most of the important lessons of traditional urban planning and even belittles its practice. Jacobs goes into great detail on many aspects of traditional urban planning and how it contributed to a successful city."
 
   def image_text_extraction_gpt4_vision(self, image_file_path):
-    base64_image = encode_image(image_file_path)
+    base64_image = encode_image_base64_url(image_file_path)
     response = client.chat.completions.create(
       model="gpt-4-vision-preview",
       messages=[
