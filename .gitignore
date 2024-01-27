@@ -1,3 +1,7 @@
+# Directories
+scripts-legacy/
+utils-legacy/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -29,9 +33,6 @@ MANIFEST
 # PyInstaller
 #  Usually these files are written by a python script from a template
 
-# Directories
-scripts-legacy/
-utils-legacy/
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
